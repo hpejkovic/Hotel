@@ -1,0 +1,16 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.App {
+  height: 100%;
+}
+
+.outlet {
+  margin-top: 20px;
+}
+
+#root {
+  height: 100%;
+}

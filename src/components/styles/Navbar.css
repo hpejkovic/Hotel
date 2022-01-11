@@ -1,12 +1,42 @@
 nav {
+  border-bottom: 1px solid white;
+}
+.navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navLinks {
   display: flex;
-  width: 200px;
-  justify-content: space-between;
+  min-width: 200px;
+  justify-content: space-around;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  border: white 2px solid;
+  padding: 5px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.link:last-child {
+  margin-right: 0px;
+}
+
+.link:hover {
+  transform: scale(0.95);
+}
+
+.activeLink {
+  text-decoration: none;
+  color: yellow;
+  border: white 2px solid;
+  padding: 5px;
+  border-radius: 15px;
+  margin-right: 10px;
 }
