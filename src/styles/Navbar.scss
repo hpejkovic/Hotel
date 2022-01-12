@@ -1,7 +1,5 @@
 nav {
   border-bottom: 1px solid white;
-}
-.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,19 +22,14 @@ nav {
   margin-right: 10px;
 }
 
-.link:last-child {
-  margin-right: 0px;
-}
-
 .link:hover {
   transform: scale(0.95);
 }
 
 .activeLink {
-  text-decoration: none;
   color: yellow;
-  border: white 2px solid;
-  padding: 5px;
-  border-radius: 15px;
-  margin-right: 10px;
+}
+
+.link:last-child {
+  margin-right: 0px;
 }

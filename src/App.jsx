@@ -1,28 +1,25 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { Navbar, Main } from './components';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  Outlet,
-  useNavigate,
-  Navigate,
-} from 'react-router-dom';
-import About from './routes/About';
-import Home from './routes/Home';
-import NothingHere from './routes/NothingHere';
+import { Navbar } from './components';
+import { Outlet } from 'react-router-dom';
+import 'animate.css/animate.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  delay: 10, // values from 0 to 3000, with step 50ms
+  duration: 1000,
+
+  // whether animation should happen only once - while scrolling down // whether elements should animate out while scrolling past them
+});
 
 function App() {
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   navigate('/home');
-  // });
   return (
-    <div>
+    <div className="container">
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="outlet">
+        <Outlet />
+      </div>
     </div>
   );
 }

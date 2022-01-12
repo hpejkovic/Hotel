@@ -1,54 +1,48 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink,
-  Outlet,
-} from 'react-router-dom';
-import './styles/Navbar.css';
+import { NavLink } from 'react-router-dom';
+import '../styles/Navbar.scss';
 
 const Navbar = () => {
   return (
     <nav>
-      <div className="container">
-        <div className="navigation">
-          <h1>Hotel Grande</h1>
-          <div className="navLinks">
-            <NavLink
-              to="/"
-              className={({ isActive }) => {
-                return isActive ? 'activeLink' : 'link';
-              }}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => {
-                return isActive ? 'activeLink' : 'link';
-              }}
-            >
-              About
-            </NavLink>
-            <NavLink
-              to="/location"
-              className={({ isActive }) => {
-                return isActive ? 'activeLink' : 'link';
-              }}
-            >
-              Location
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => {
-                return isActive ? 'activeLink' : 'link';
-              }}
-            >
-              Contact
-            </NavLink>
-          </div>
-        </div>
+      <h1 data-aos="fade-down-right">Hotel Grande</h1>
+      <div className="navLinks">
+        <NavLink
+          to="/home"
+          data-aos="fade-down-left"
+          className={({ isActive }) => {
+            return isActive ? 'link activeLink' : 'link';
+          }}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          data-aos="fade-down-left"
+          className={({ isActive }) => {
+            return isActive ? 'link activeLink' : 'link';
+          }}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/location"
+          data-aos="fade-down-left"
+          className={({ isActive }) => {
+            return isActive ? 'link activeLink' : 'link';
+          }}
+        >
+          Location
+        </NavLink>
+        <NavLink
+          to="/contact"
+          data-aos="fade-down-left"
+          className={({ isActive }) => {
+            return isActive ? 'link activeLink' : 'link';
+          }}
+        >
+          Contact
+        </NavLink>
       </div>
     </nav>
   );

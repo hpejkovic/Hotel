@@ -1,8 +1,8 @@
-import './styles/Main.css';
+import '../styles/Main.css';
 
 const Main = () => {
   return (
-    <div className="main container">
+    <div className="main">
       <div className="info">
         <h2>Hotel grande is the best 3 star hotel in the world</h2>
       </div>
