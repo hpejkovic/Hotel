@@ -20,15 +20,10 @@ function App() {
   //   navigate('/home');
   // });
   return (
-    <Router>
+    <div>
       <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Navigate to="home" />}></Route>
-        <Route path="home" element={<Home></Home>}></Route>
-        <Route path="about" element={<About />} />
-        <Route path="*" element={<NothingHere></NothingHere>} />
-      </Routes>
-    </Router>
+      <Outlet></Outlet>
+    </div>
   );
 }
 
